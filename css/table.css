@@ -1,0 +1,11 @@
+.selected{
+    cursor: pointer;
+}
+.selected:hover{
+    background-color: red;
+    color: yellow;
+}
+.scrollable{
+    height: 200px;
+    overflow: scroll;
+}

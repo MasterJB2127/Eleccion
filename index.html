@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/Celurean/bootstrap.css">
     <link rel="stylesheet" href="css/styleimg.css">
+    <link rel="stylesheet" href="css/menu.css">
     <title>Municipalidad de Mataquescuintla</title>
 </head>
 
 <body
     style="background-image:url('img/m.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 105%; background-position: center;">
-    
+
+
     <nav style="background-color:  rgba(255, 0, 0, 0.5);" class="navbar navbar-expand-lg navbar-expand-sm navbar-dark justify-content-center">
         <a class="navbar-brand" href="#"> </a>
         
-        <h2 style="color: yellow; text-align: center;" style="text-align: center;"> <img src="img/logo2020.png" width="50" height="75">
+        <span class="open-side">
+          <a href="#" onclick="openSideMenu()">
+            <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="#111" stroke-width="5"/>
+              <path d="M0,14 30,14" stroke="#111" stroke-width="5"/>
+              <path d="M0,23 30,23" stroke="#111" stroke-width="5"/>
+            </svg>
+          </a>
+        </span>
+        
+        <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+          <a href="#">Inicio</a>
+          <a href="#">Srita. Flor del Café</a>
+          <a href="#">Miss chiquitita</a>
+        </div>
+
+        <h2 id="main" style="color: yellow; text-align: center;" style="text-align: center;"> <img src="img/logo2020.png" width="50" height="75">
           CANDIDATAS SEÑORITA FLOR DEL CAFE</h2>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -74,6 +93,7 @@
 
     
     <script src="index.js"></script>
+    <script src="js/menu.js"></script>
 
 </body>
 

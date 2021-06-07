@@ -1,5 +1,3 @@
-
-
 var firebaseConfig = {
     apiKey: "AIzaSyANLJq4MJbgWmLQweUvum90HXYC-iqPkNg",
     authDomain: "restaurante-9a1a3.firebaseapp.com",

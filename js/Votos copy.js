@@ -12,14 +12,18 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-function sumar(nombre, votos, id) {
+function sumar(nombre, votos, id, tipo) {
 
     var voto = parseInt(votos) + 1;
     console.log(voto);
-    modificar(nombre, voto, id);
+    if(tipo == 'SFDC'){
+        modificarsrta(nombre, voto, id);
+    }else{
+        modificarniña(nombre, voto, id);
+    }
 }
 
-function modificar(nombre, voto, id) {
+function modificarsrta(nombre, voto, id) {
     var db = firebase.database();
 
     var data = {
@@ -29,20 +33,43 @@ function modificar(nombre, voto, id) {
 
     var key = atob(localStorage.getItem('FDC'));
     console.log(key);
-    if (key == 'V2') {
+    if (key == 'V1') {
 
         if (db.ref('/Candidatas/' + id).update(data)) {
             setTimeout(function () {
                 Completado('VOTO REALIZADO CORRECTAMENTE');
             }, 500);
-            localStorage.setItem('FDC', btoa('V1'));
+            localStorage.setItem('FDC', btoa('V2'));
         }
     } else {
         error('USTED YA REALIZÓ UN VOTO ANTERIORMENTE');
     }
 }
 
-function buscar(n, id) {
+function modificarniña(nombre, voto, id) {
+    var db = firebase.database();
+
+    var data = {
+        Nombre: nombre,
+        Votos: voto
+    }
+
+    var key = atob(localStorage.getItem('MSC'));
+    console.log(key);
+    if (key == 'V1') {
+
+        if (db.ref('/Candidatas/' + id).update(data)) {
+            setTimeout(function () {
+                Completado('VOTO REALIZADO CORRECTAMENTE');
+            }, 500);
+            localStorage.setItem('MSC', btoa('V2'));
+        }
+    } else {
+        error('USTED YA REALIZÓ UN VOTO ANTERIORMENTE');
+    }
+}
+
+function buscar(n, id, tipo) {
 try{
     const menu = firebase.database().ref("Candidatas/");
     var nombre;
@@ -57,7 +84,7 @@ try{
         }
         );
     })
-    sumar(nombre, votos, id);
+    sumar(nombre, votos, id, tipo);
 }catch{
     error('OCURRIÓ UN ERROR INTENTE VOTAR DE NUEVO');
 }

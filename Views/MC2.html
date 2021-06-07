@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,12 @@
     <link rel="stylesheet" href="../css/swiperprov.css">
     <link rel="shortcut icon" href="../img/logo2020.png" />
     <link rel="stylesheet" href="../css/toastr.min.css">
+
     <title>Municipalidad de Mataquescuintla</title>
 </head>
+
 <body
-    style="background-image:url('../img/m.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 105%; background-position: center;"
-    oncontextmenu="return false" onkeydown="return false">
+    style="background-image:url('../img/m.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 105%; background-position: center;">
 
     <nav style="background-color:  rgba(255, 0, 0, 0.5);"
         class="navbar navbar-expand-lg navbar-expand-sm navbar-dark justify-content-center">
@@ -29,14 +31,13 @@
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
             <a href="../index.html">Inicio</a>
-            <a href="FlorDelCafe.html">Srita. Flor del Café</a>
-            <a href="MissChiquitita.html">Miss chiquitita</a>
+            <a href="FlorDelCafe.html">SRITA. FLOR DEL CAFÉ</a>
+            <a href="MissChiquitita.html">NIÑA FLOR DEL CAFÉ</a>
             <a href="https://munimataquescuintla.gob.gt/">Municipalidad de Mataquescuintla</a>
         </div>
         <div class="container justify-content-center">
-            <h2 style="color: yellow; text-align: center;"> <img
-                    src="../img/logo2020.png" width="50" height="75">
-                CANDIDATAS MISS CHIQUITITA</h2>
+            <h2 style="color: yellow; text-align: center;"> <img src="../img/logo2020.png" width="50" height="75">
+                CANDIDATAS SEÑORITA FLOR DEL CAFE</h2>
         </div>
     </nav>
 
@@ -46,7 +47,7 @@
             <br>
             <div class="row">
                 <div class="container col-sm-12 col-md-10 col-lg-5 col-xl-5">
-                    <h1 style="text-align: center; color: yellow;">Candidata 2</h1>
+                    <h1 style="text-align: center; color: yellow;">Candidata 1</h1>
                     <div class="swiper-container swiper1">
                         <div id="" class="swiper-wrapper">
                             <div class="swiper-slide"><img class="im mx-auto d-block img-fluid" src="../img/Fondo.jpg"
@@ -71,7 +72,7 @@
             </div>
             <br>
             <div class="row justify-content-center">
-                <button id="MC2" onclick="MSC(this.id)" class="btn btn-danger" style="font-size: 200%;">VOTAR</button>
+                <button id="FC1" class="btn btn-danger" onclick="buscar('N2', 'N2')" style="font-size: 200%;">VOTAR</button>
             </div>
             <br>
             <br>
@@ -85,7 +86,8 @@
         <div class="container col-12">
             <div class="row">
                 <div class="col-12">
-                    <p style="color: white;">Made by <a href="" style="color:white">Augusto Pacheco <br> Josué Bonilla</a>.</p>
+                    <p style="color: white;">Made by <a href="" style="color:white">Augusto Pacheco <br> Josué
+                            Bonilla</a>.</p>
                     <h6 style="color: white">All rights reserved</h6>
                 </div>
             </div>
@@ -93,12 +95,15 @@
     </footer>
 
     <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/swiperprov.js"></script>
-    <script src="../js/Votos.js"></script>
+    <script src="../js/Votos copy.js"></script>
     <script src="../js/toastr.min.js"></script>
 
 </body>
+
 </html>

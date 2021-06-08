@@ -88,6 +88,10 @@ try{
 }
 }
 
+function Nohay(){
+    error('VOTACIONES PROXIMAMENTE');
+}
+
 function local() {
     var key = atob(localStorage.getItem('FDC'));
     console.log(key);

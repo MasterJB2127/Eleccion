@@ -1,0 +1,12 @@
+@font-face{
+    font-family: AveBetwan;
+    src: url(Zaheera.ttf) format('truetype');
+}
+
+body{
+    font-family: AveBetwan;
+}
+
+.letras{
+    font-family:Arial, Helvetica, sans-serif
+}

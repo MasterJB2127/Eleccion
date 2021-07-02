@@ -11,9 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function sumar(nombre, votos, id, tipo) {
-
     var voto = parseInt(votos) + 1;
-    console.log(voto);
     if(tipo == 'SFDC'){
         modificarsrta(nombre, voto, id);
     }else{
@@ -23,47 +21,41 @@ function sumar(nombre, votos, id, tipo) {
 
 function modificarsrta(nombre, voto, id) {
     var db = firebase.database();
-
     var data = {
         Nombre: nombre,
         Votos: voto
     }
-
     var key = atob(localStorage.getItem('FDC'));
-    console.log(key);
     if (key == 'V1') {
 
         if (db.ref('/Candidatas/' + id).update(data)) {
             setTimeout(function () {
-                Completado('VOTO REALIZADO CORRECTAMENTE');
+                Completado('Voto Realizado Correctamente');
             }, 500);
             localStorage.setItem('FDC', btoa('V2'));
         }
     } else {
-        error('USTED YA REALIZÓ UN VOTO ANTERIORMENTE');
+        error('Usted Ya Realizó Un Voto Anteriormente');
     }
 }
 
 function modificarniña(nombre, voto, id) {
     var db = firebase.database();
-
     var data = {
         Nombre: nombre,
         Votos: voto
     }
-
     var key = atob(localStorage.getItem('MSC'));
-    console.log(key);
     if (key == 'V1') {
 
         if (db.ref('/Candidatas/' + id).update(data)) {
             setTimeout(function () {
-                Completado('VOTO REALIZADO CORRECTAMENTE');
+                Completado('Voto Realizado Correctamente');
             }, 500);
             localStorage.setItem('MSC', btoa('V2'));
         }
     } else {
-        error('USTED YA REALIZÓ UN VOTO ANTERIORMENTE');
+        error('Usted Ya Realizó Un Voto Anteriormente');
     }
 }
 
@@ -84,7 +76,7 @@ try{
     })
     sumar(nombre, votos, id, tipo);
 }catch{
-    error('OCURRIÓ UN ERROR INTENTE VOTAR DE NUEVO');
+    error('Ocurrió un Error, Intente Votar Nuevamente');
 }
 }
 
@@ -94,7 +86,6 @@ function Nohay(){
 
 function local() {
     var key = atob(localStorage.getItem('FDC'));
-    console.log(key);
 }
 
 $(document).ready(local());
